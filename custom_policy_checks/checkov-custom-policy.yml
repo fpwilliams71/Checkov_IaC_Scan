@@ -1,6 +1,6 @@
 metadata:
  name: "Org's compute instances should not be us-central1-c"
- id: "CKV2_GCP_1001"
+ id: "CKOV_LG_0001"
  category: "NETWORKING"
 definition:
  or:
