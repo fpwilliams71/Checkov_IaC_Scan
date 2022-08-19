@@ -1,0 +1,20 @@
+trigger: none
+
+pr:
+  branches:
+    include:
+    - main
+
+variables:
+- name: tf_folder
+  value: $(System.DefaultWorkingDirectory) 
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- script: |
+      docker pull bridgecrew/checkov
+      docker run --tty --volume $(tf_folder):/tf --workdir /tf bridgecrew/checkov --directory /tf --external-checks-git https://github.com/sun1l-aries/iac_checkov.git//custom_checks
+# docker run --tty --volume $(pwd):/tf --workdir /tf bridgecrew/checkov --directory /tf --external-checks-git https://github.com/fpwilliams71/terraform-gcp-vm.git//custom_checks
