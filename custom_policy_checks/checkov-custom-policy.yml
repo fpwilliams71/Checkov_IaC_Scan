@@ -1,6 +1,6 @@
 metadata:
- name: "Org's compute instances should not be us-central1-c"
- id: "CKOV_LG_0001"
+ name: "Ensure compute instances are not created in us-central1-c zone"
+ id: "CKV_LG_0001"
  category: "NETWORKING"
 definition:
  or:
