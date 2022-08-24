@@ -1,6 +1,6 @@
 metadata:
- name: "Ensure compute instances are not created in us-central1-c zone"
- id: "CKV_LG_0001"
+ name: "Ensure compute instances are not created as f1-micro machine type"
+ id: "CKV_LG_0002"
  category: "NETWORKING"
 definition:
  or:
