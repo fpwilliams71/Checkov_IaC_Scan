@@ -1,7 +1,7 @@
 resource "google_compute_instance" "default" {
   name         = var.gcp_compute_name
   machine_type = var.gcp_machine_type
-  zone         = var.gcp_zone
+  zone         = "us-central1-a"
 
   tags = ["server", "dev"]
 
