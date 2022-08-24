@@ -15,7 +15,7 @@ pool:
 steps:
 
 - script: |
-      docker run --tty --volume $(tf_folder):/tf --workdir /tf bridgecrew/checkov --directory /tf --external-checks-git https://github.com/fpwilliams71/Checkov_IaC_Scan.git//custom_policy_checks 
+      docker run --tty --volume $(tf_folder):/tf --workdir /tf bridgecrew/checkov --directory /tf --external-checks-git https://github.com/fpwilliams71/Checkov_IaC_Scan.git//custom_policy_checks --output junitxml > $(System.DefaultWorkingDirectory)/Checkov-Report.xml
 #      docker run --tty --volume $(tf_folder):/tf --workdir /tf bridgecrew/checkov --directory /tf --external-checks-git https://github.com/fpwilliams71/Checkov_IaC_Scan.git//custom_policy_checks --output junitxml > $(tf_folder)/Checkov-Report.xml
 # docker run --tty --volume $(tf_folder):/tf --workdir /tf bridgecrew/checkov --directory /tf --external-checks-git https://github.com/fpwilliams71/Checkov_IaC_Scan.git//custom_policy_checks    
 # docker run --tty --volume $(tf_folder):/tf --workdir /tf bridgecrew/checkov --directory /tf --external-checks-git https://github.com/sun1l-aries/iac_checkov.git//custom_checks
