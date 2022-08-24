@@ -1,0 +1,12 @@
+metadata:
+ name: "Ensure compute instances are not created in us-central1-c zone"
+ id: "CKV_LG_0001"
+ category: "NETWORKING"
+definition:
+ or:
+ - cond_type: "attribute"
+   resource_types:
+   - "google_compute_instance"
+   attribute: "machine_type"
+   operator: "not_equals"
+   value: "f1-micro"
