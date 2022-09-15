@@ -1,5 +1,6 @@
 metadata:
  name: "Ensure all AWS databases have Backup Policy"
+ id: "CKV_LG_0003"
  guidelines: "In case of non-compliant resource - add a backup policy configuration for the resource"
  category: "storage"
  severity: "medium"
