@@ -3,6 +3,11 @@ resource "google_compute_instance" "default" {
   machine_type = var.gcp_machine_type
   zone         = var.gcp_zone
 
+  service_account {
+    scopes = ["userinfo-email", "compute-ro", "storage-ro"]
+    email  = "example@email.com"
+  }
+
   tags = ["server", "dev"]
 
   boot_disk {
