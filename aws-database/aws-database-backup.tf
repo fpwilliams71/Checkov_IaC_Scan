@@ -17,7 +17,7 @@ provider "aws" {
 
 
 resource "aws_db_instance" "rds_instance" {
-allocated_storage = 20
+allocated_storage = 40
 identifier = "rds-terraform"
 storage_type = "gp2"
 engine = "mysql"
