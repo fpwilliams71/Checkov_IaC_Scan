@@ -21,8 +21,3 @@ steps:
 # docker run --tty --volume $(tf_folder):/tf --workdir /tf bridgecrew/checkov --directory /tf --external-checks-git https://github.com/fpwilliams71/Checkov_IaC_Scan.git//custom_policy_checks    
 # docker run --tty --volume $(tf_folder):/tf --workdir /tf bridgecrew/checkov --directory /tf --external-checks-git https://github.com/sun1l-aries/iac_checkov.git//custom_checks
 # docker run --tty --volume $(pwd):/tf --workdir /tf bridgecrew/checkov --directory /tf --external-checks-git https://github.com/fpwilliams71/terraform-gcp-vm.git//custom_checks
-
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'JUnit'
-    testResultsFiles: '**/TEST-*.xml'
