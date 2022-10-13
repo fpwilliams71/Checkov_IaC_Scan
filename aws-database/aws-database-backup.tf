@@ -26,7 +26,7 @@ instance_class = "db.t2.micro"
 name = "your-db-name"
 username = "your-db-username"
 password = "your-password"
-publicly_accessible    = true
+publicly_accessible    = false
 skip_final_snapshot    = true
 storage_encrypted    = true
 
