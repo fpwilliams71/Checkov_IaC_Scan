@@ -1,0 +1,10 @@
+metadata:
+  name: "Ensure that storage account name has no special characters"
+  category: "Storage"
+  id: "CKV2_AZ_LG_CUSTOM_XXX1"
+definition:
+  resource_types:
+  - "azurerm_storage_account"
+  attribute: "name"
+  operator: regex_match
+  value: "^[a-z0-9]{3,24}$"
