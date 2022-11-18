@@ -2,10 +2,11 @@
 metadata:
   name: "Ensure S3 bucket account name has no special character"
   id: "CKV2_AWS_LG_CUSTOM_XXX2"
-  category: "Storage"
+  category: "CONVENTION"
 definition:
+  cond_type: "attribute"
   resource_types:
-  - "aws_s3_bucket"
+    - "aws_s3_bucket"
   attribute: "bucket"
   operator: regex_match
   value: "^[a-z0-9]{3,24}$"
