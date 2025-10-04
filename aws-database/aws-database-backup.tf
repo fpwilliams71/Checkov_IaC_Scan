@@ -28,7 +28,7 @@ username = "your-db-username"
 password = "your-password"
 publicly_accessible    = true
 skip_final_snapshot    = true
-storage_encrypted    = true
+storage_encrypted    = false
 
 
   tags = {
